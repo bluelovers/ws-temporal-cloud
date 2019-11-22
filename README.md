@@ -1,5 +1,7 @@
 # Temporal-js
 
+[![npm version](https://badge.fury.io/js/temporal-js.svg)](https://badge.fury.io/js/temporal-js)
+
 Javascript library for Temporal (https://github.com/RTradeLtd/Temporal)
 
 ## Usage
