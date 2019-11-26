@@ -3,7 +3,7 @@ const fs = require('fs');
 const Temporal = require('..');
 const Utils = require('../test/utils');
 
-const temporal = new Temporal();
+const temporal = new Temporal(true);
 
 const username = Utils.randomString();
 const email = `${username}@test.com`;
