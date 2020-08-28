@@ -56,11 +56,15 @@
   },
   "resolutions": {},
   "dependencies": {
-    "ipfs-http-client": "^46.0.0",
-    "temporal-js": "^2.0.0"
+    "cross-fetch": "^3.0.5",
+    "ipfs-http-client": "^46.0.1",
+    "ipfs-log": "^4.6.2",
+    "orbit-db-identity-provider": "^0.3.1"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.20",
+    "@types/bluebird": "^3.5.32",
+    "@types/err-code": "^2.0.0",
     "@types/node": "*"
   },
   "peerDependencies": {
