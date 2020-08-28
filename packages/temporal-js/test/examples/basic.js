@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-const Temporal = require('..');
-const Utils = require('../test/utils');
+const Temporal = require('../../index');
+const Utils = require('../utils');
 
 const temporal = new Temporal(true);
 
