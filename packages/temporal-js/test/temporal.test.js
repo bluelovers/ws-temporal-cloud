@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const { assert } = require('chai');
-const Temporal = require('..');
+const Temporal = require('../index').Temporal;
 const Utils = require('./utils');
 
 describe('Temporal JS API', () => {

@@ -52,7 +52,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha --timeout 100000",
+    "test": "echo \"Error: no test specified\"",
+    "test:mocha": "mocha --timeout 100000 \"!(node_modules)/**/*.test.js\"",
     "preversion": "yarn run test",
     "prepublishOnly_": "echo prepublishOnly",
     "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
