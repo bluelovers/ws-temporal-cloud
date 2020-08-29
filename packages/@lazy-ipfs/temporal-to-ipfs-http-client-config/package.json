@@ -1,7 +1,7 @@
 {
-  "name": "@lazy-ipfs/temporal-ipfs-client",
+  "name": "@lazy-ipfs/temporal-to-ipfs-http-client-config",
   "version": "1.0.0",
-  "description": "ipfs-http-client for temporal",
+  "description": "",
   "keywords": [
     "ipfs",
     "temporal",
@@ -32,7 +32,7 @@
     "bearer",
     "jwt"
   ],
-  "homepage": "https://github.com/bluelovers/ws-temporal-cloud/tree/master/packages/@lazy-ipfs/temporal-ipfs-client#readme",
+  "homepage": "https://github.com/bluelovers/ws-temporal-cloud/tree/master/packages/@lazy-ipfs/temporal-to-ipfs-http-client-config#readme",
   "bugs": {
     "url": "https://github.com/bluelovers/ws-temporal-cloud/issues"
   },
@@ -55,13 +55,10 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {
-    "@lazy-ipfs/temporal-to-ipfs-http-client-config": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {},
   "peerDependencies": {
-    "temporal-js2": "^2.0.0",
-    "ipfs-http-client": "^46"
+    "temporal-js2": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"

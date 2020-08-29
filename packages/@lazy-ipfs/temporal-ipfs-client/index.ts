@@ -1,9 +1,8 @@
 import ipfsClient from 'ipfs-http-client';
-import { ITemporalBaseConfig } from 'temporal-js2/lib/types';
 import {
 	ITemporalBaseConfigForIPFSHttpClientConfig,
 	toIPFSHttpClientConfig,
-} from 'temporal-js2/lib/toIPFSHttpClientConfig';
+} from '@lazy-ipfs/temporal-to-ipfs-http-client-config';
 
 export function ipfsTemporalClient<T extends any = any>(temporal: ITemporalBaseConfigForIPFSHttpClientConfig): T
 {
