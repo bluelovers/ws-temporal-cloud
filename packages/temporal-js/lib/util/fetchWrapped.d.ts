@@ -5,10 +5,11 @@ export declare function handleFetchOptions(options: IOptionsFetchWrapped): {
     url: string;
     opts: {
         headers: Headers;
-        body?: string | Blob | ArrayBufferView | ArrayBuffer | FormData | URLSearchParams | ReadableStream<Uint8Array> | Record<any, any>;
-        data?: string | Blob | ArrayBufferView | ArrayBuffer | FormData | URLSearchParams | ReadableStream<Uint8Array> | Record<any, any>;
+        body?: string | ArrayBuffer | ArrayBufferView | Blob | FormData | URLSearchParams | ReadableStream<Uint8Array> | Record<any, any>;
+        data?: string | ArrayBuffer | ArrayBufferView | Blob | FormData | URLSearchParams | ReadableStream<Uint8Array> | Record<any, any>;
         formData?: Record<string, any>;
         responseType?: string;
+        window?: any;
         cache?: RequestCache;
         credentials?: RequestCredentials;
         integrity?: string;
@@ -19,7 +20,6 @@ export declare function handleFetchOptions(options: IOptionsFetchWrapped): {
         referrer?: string;
         referrerPolicy?: ReferrerPolicy;
         signal?: AbortSignal;
-        window?: any;
     };
 };
 export declare function fetchWrapped<T = any>(options: IOptionsFetchWrapped): Bluebird<{

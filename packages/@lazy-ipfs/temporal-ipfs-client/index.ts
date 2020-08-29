@@ -5,14 +5,14 @@ import {
 	toIPFSHttpClientConfig,
 } from 'temporal-js2/lib/toIPFSHttpClientConfig';
 
-export function ipfsTemporalClient<T>(temporal: ITemporalBaseConfigForIPFSHttpClientConfig): T
+export function ipfsTemporalClient<T extends any = any>(temporal: ITemporalBaseConfigForIPFSHttpClientConfig): T
 {
 	const ipfs = ipfsClient(toIPFSHttpClientConfig(temporal));
 
 	return ipfs
 }
 
-export async function ipfsTemporalClientAsync<T>(temporal: ITemporalBaseConfigForIPFSHttpClientConfig)
+export async function ipfsTemporalClientAsync<T extends any = any>(temporal: ITemporalBaseConfigForIPFSHttpClientConfig)
 {
 	return ipfsTemporalClient<T>(temporal)
 }
