@@ -1,6 +1,6 @@
 {
   "name": "@lazy-ipfs/temporal-to-ipfs-http-client-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [
     "ipfs",
@@ -55,8 +55,6 @@
     "ncu": "yarn-tool ncu -u",
     "sort-package-json": "yarn-tool sort"
   },
-  "dependencies": {},
-  "devDependencies": {},
   "peerDependencies": {
     "temporal-js2": "^2.0.0"
   },

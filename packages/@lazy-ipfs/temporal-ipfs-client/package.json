@@ -1,6 +1,6 @@
 {
   "name": "@lazy-ipfs/temporal-ipfs-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ipfs-http-client for temporal",
   "keywords": [
     "ipfs",
@@ -56,12 +56,11 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "@lazy-ipfs/temporal-to-ipfs-http-client-config": "^1.0.0"
+    "@lazy-ipfs/temporal-to-ipfs-http-client-config": "^1.0.1"
   },
-  "devDependencies": {},
   "peerDependencies": {
-    "temporal-js2": "^2.0.0",
-    "ipfs-http-client": "^46"
+    "ipfs-http-client": "^46",
+    "temporal-js2": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"
