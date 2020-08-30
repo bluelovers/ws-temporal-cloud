@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`assertTemporalConfig 1`] = `"temporal.ipfsEndpoint is required"`;
+
+exports[`assertTemporalConfig 2`] = `"temporal.ipfsEndpoint is required"`;
+
+exports[`assertTemporalConfig 3`] = `"temporal.ipfsEndpoint is required"`;
+
+exports[`assertTemporalConfig 4`] = `"temporal.token is required"`;
+
+exports[`assertTemporalConfig 5`] = `"temporal.ipfsEndpointPort should is port, but got ''"`;
+
+exports[`assertTemporalConfig 6`] = `"temporal.ipfsEndpointPort should is port, but got 'kkk'"`;

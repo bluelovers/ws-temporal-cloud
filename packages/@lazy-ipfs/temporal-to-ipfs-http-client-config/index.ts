@@ -5,11 +5,17 @@ export interface ITemporalBaseConfigForIPFSHttpClientConfig extends Pick<ITempor
 
 }
 
-export function assertTemporalConfig<T extends ITemporalBaseConfigForIPFSHttpClientConfig>(temporal: T): asserts temporal is T & {
+export function isNullOrUndefined(value): value is null | undefined
+{
+	return value === void 0 || value === null
+}
+
+export function assertTemporalConfig<T extends Partial<ITemporalBaseConfigForIPFSHttpClientConfig>>(temporal: T): asserts temporal is T & {
 	ipfsEndpoint: string,
 	token: string,
 }
 {
+
 	if (!temporal?.ipfsEndpoint?.length)
 	{
 		throw new TypeError(`temporal.ipfsEndpoint is required`)
@@ -19,9 +25,17 @@ export function assertTemporalConfig<T extends ITemporalBaseConfigForIPFSHttpCli
 	{
 		throw new TypeError(`temporal.token is required`)
 	}
+
+	let port = temporal?.ipfsEndpointPort?.toString?.();
+
+	if (!isNullOrUndefined(port) && (!port.length || port.match(/\D/)?.length))
+	{
+		throw new TypeError(`temporal.ipfsEndpointPort should is port, but got '${temporal.ipfsEndpointPort}'`)
+	}
+
 }
 
-export function toIPFSHttpClientConfig(temporal: ITemporalBaseConfigForIPFSHttpClientConfig)
+export function toIPFSHttpClientConfig<T extends Partial<ITemporalBaseConfigForIPFSHttpClientConfig>>(temporal: T)
 {
 	assertTemporalConfig(temporal);
 

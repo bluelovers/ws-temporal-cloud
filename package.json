@@ -59,12 +59,15 @@
     "cross-fetch": "^3.0.5",
     "ipfs-http-client": "^46.0.1",
     "ipfs-log": "^4.6.2",
-    "orbit-db-identity-provider": "^0.3.1"
+    "jest": "^26.4.2",
+    "orbit-db-identity-provider": "^0.3.1",
+    "ts-jest": "^26.3.0"
   },
   "devDependencies": {
     "@bluelovers/tsconfig": "^1.0.20",
     "@types/bluebird": "^3.5.32",
     "@types/err-code": "^2.0.0",
+    "@types/jest": "^26.0.10",
     "@types/node": "*"
   },
   "peerDependencies": {
