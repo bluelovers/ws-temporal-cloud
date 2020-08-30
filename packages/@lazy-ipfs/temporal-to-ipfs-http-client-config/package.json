@@ -1,6 +1,6 @@
 {
   "name": "@lazy-ipfs/temporal-to-ipfs-http-client-config",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "ipfs",
