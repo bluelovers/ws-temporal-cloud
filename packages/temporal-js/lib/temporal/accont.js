@@ -46,6 +46,18 @@ class TemporalAccount extends core_1.TemporalCore {
             return res.data;
         });
     }
+    async loginByToken(token) {
+        const temporal = Object.create(this);
+        temporal.token = token;
+        const ret = await this.getUsernameFromToken.call(temporal);
+        if (typeof ret === 'string' && ret.length) {
+            this.token = ret;
+        }
+        else {
+            throw new Error(`login failed by token '${token}'`);
+        }
+        return this;
+    }
     /**
      * Gets the username of the current user
      * @return The username of the current user

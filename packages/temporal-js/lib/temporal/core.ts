@@ -2,6 +2,7 @@ import { IOptionsTemporal, ITemporalResponseData, IOptionsTemporalFetch, ITempor
 import { handleTemporalApiCoreSetting } from '../options';
 import { convertToHeaders, ensureHeadersValue } from '../util/fetchHeaders';
 import { fetchWrapped } from '../util/fetchWrapped';
+import { fetchTemporal } from '../util/fetchTemporal';
 
 /**
  * @see https://gateway.temporal.cloud/ipns/docs.api.temporal.cloud/account.html
@@ -33,11 +34,7 @@ export class TemporalCore implements ITemporalBaseConfig
 
 	protected _fetch<T = ITemporalResponseData<unknown>>(opts: IOptionsTemporalFetch)
 	{
-		opts.headers = convertToHeaders(opts.headers);
-
-		ensureHeadersValue(opts.headers, 'Authorization', `Bearer ${this.token}`);
-
-		return fetchWrapped<T>(opts)
+		return fetchTemporal<T>(opts, this)
 	}
 
 }

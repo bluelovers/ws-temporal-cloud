@@ -2,8 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TemporalCore = void 0;
 const options_1 = require("../options");
-const fetchHeaders_1 = require("../util/fetchHeaders");
-const fetchWrapped_1 = require("../util/fetchWrapped");
+const fetchTemporal_1 = require("../util/fetchTemporal");
 /**
  * @see https://gateway.temporal.cloud/ipns/docs.api.temporal.cloud/account.html
  * @see https://gateway.temporal.cloud/ipns/docs.api.temporal.cloud/ipfs.html
@@ -22,9 +21,7 @@ class TemporalCore {
         this.token = prod.token;
     }
     _fetch(opts) {
-        opts.headers = fetchHeaders_1.convertToHeaders(opts.headers);
-        fetchHeaders_1.ensureHeadersValue(opts.headers, 'Authorization', `Bearer ${this.token}`);
-        return fetchWrapped_1.fetchWrapped(opts);
+        return fetchTemporal_1.fetchTemporal(opts, this);
     }
 }
 exports.TemporalCore = TemporalCore;

@@ -11,6 +11,7 @@ import {
 } from '../types';
 import { buildTemporalApiHref } from '../buildTemporalApiUrl';
 import { assertTemporalResponse } from '../util/errorTemporalResponse';
+import { fetchTemporal } from '../util/fetchTemporal';
 
 export class TemporalAccount extends TemporalCore
 {
@@ -59,6 +60,24 @@ export class TemporalAccount extends TemporalCore
 				this.token = res.data.token;
 				return res.data;
 			})
+	}
+
+	async loginByToken(token: string)
+	{
+		const temporal = Object.create(this) as this;
+		temporal.token = token;
+		const ret = await this.getUsernameFromToken.call(temporal);
+
+		if (typeof ret === 'string' && ret.length)
+		{
+			this.token = ret;
+		}
+		else
+		{
+			throw new Error(`login failed by token '${token}'`)
+		}
+
+		return this
 	}
 
 	/**

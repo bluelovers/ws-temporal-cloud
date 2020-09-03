@@ -20,6 +20,12 @@ export declare class TemporalAccount extends TemporalCore {
         EmailEnabled: boolean;
         AdminAccess: boolean;
         EmailVerificationToken: string;
+        /**
+         * Logs in an user
+         * @param username The username of the user
+         * @param password The password of the user
+         * @return An object containing the id of the token and its expiry date
+         */
         HashedPassword: string;
         Free: boolean;
         Credits: number;
@@ -37,6 +43,7 @@ export declare class TemporalAccount extends TemporalCore {
      * @return An object containing the id of the token and its expiry date
      */
     login(username: string, password: string): Bluebird<IResponseToken>;
+    loginByToken(token: string): Promise<this>;
     /**
      * Gets the username of the current user
      * @return The username of the current user
