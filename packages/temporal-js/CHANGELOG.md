@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-temporal-cloud/compare/temporal-js2@2.0.1...temporal-js2@2.0.2) (2020-09-03)
+
+
+### ✨　Features
+
+* add `loginByToken` ([fa53855](https://github.com/bluelovers/ws-temporal-cloud/commit/fa53855683be2019a3e058a8f7f7930aca5aa97c))
+
+
+
+
+
 ## 2.0.1 (2020-08-29)
 
 

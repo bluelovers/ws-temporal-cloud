@@ -1,6 +1,6 @@
 {
   "name": "temporal-js2",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a javascript+typescript client for Temporal IPFS API",
   "keywords": [
     "ipfs",
